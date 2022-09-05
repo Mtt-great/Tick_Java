@@ -12,10 +12,10 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="getTickInfo" target="8" />
-      <module name="saveData" target="8" />
+      <module name="getTickInfo" target="1.8" />
+      <module name="saveData" target="1.8" />
       <module name="springBootTest_1" target="8" />
-      <module name="Tick_Java" target="1.5" />
+      <module name="Tick_Java" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

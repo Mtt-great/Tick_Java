@@ -8,6 +8,10 @@ public class test {
 
         ApplicationContext context= new ClassPathXmlApplicationContext("applicationContext.xml");
         GetTickInfo getTickInfo= (GetTickInfo) context.getBean("getTickInfo");
-        System.out.println(getTickInfo.getTickInfoBySina());
+        String[] tickInfoArray=getTickInfo.getTickInfoByTencent();
+
+        for ( String info : tickInfoArray){
+            System.out.println( info );
+        }
     }
 }

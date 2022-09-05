@@ -5,6 +5,7 @@
       <configuration>
         <fileset id="fileset" name="ApplicationContenxt" removed="false">
           <file>file://$MODULE_DIR$/src/main/resources/applicationContenxt.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/applicationContext.xml</file>
         </fileset>
       </configuration>
     </facet>

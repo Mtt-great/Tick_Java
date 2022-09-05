@@ -22,7 +22,7 @@ public class GetTickInfo {
     }
 
 
-    private String tickInfo = null;// 返回结果字符串
+    private String tickInfoString = null;// 返回结果字符串
 
     public  String getTickInfoBySina(){
 
@@ -58,7 +58,7 @@ public class GetTickInfo {
                     sbf.append(temp);
                     sbf.append("\r\n");
                 }
-                tickInfo = sbf.toString();
+                tickInfoString = sbf.toString();
             }
         } catch (MalformedURLException e) {
             e.printStackTrace();
@@ -85,11 +85,11 @@ public class GetTickInfo {
             connection.disconnect();// 关闭远程连接
         }
 
-        return tickInfo;
+        return tickInfoString;
     }
 
 
-    public String getTickInfoByTencent(){
+    public String[] getTickInfoByTencent(){
 
         HttpURLConnection connection = null;
         InputStream is = null;
@@ -121,7 +121,7 @@ public class GetTickInfo {
                     sbf.append(temp);
                     sbf.append("\r\n");
                 }
-                tickInfo = sbf.toString();
+                tickInfoString = sbf.toString();
             }
         } catch (MalformedURLException e) {
             e.printStackTrace();
@@ -148,6 +148,8 @@ public class GetTickInfo {
             connection.disconnect();// 关闭远程连接
         }
 
-        return tickInfo;
+        return tickInfoString.split("=")[1].split(";")[0].replace("\"","").split("~");
+
+
     }
 }
