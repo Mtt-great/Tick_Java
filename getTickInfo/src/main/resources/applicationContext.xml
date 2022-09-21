@@ -10,7 +10,7 @@
 
 
     <bean id="getTickInfo" class="com.matao.GetTickInfo">
-        <property name="tickCode" value="sh600196"/>
+        <property name="tickCode" value="sz002197"/>
     </bean>
 
 
